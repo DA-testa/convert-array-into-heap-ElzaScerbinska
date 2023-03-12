@@ -39,11 +39,7 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
 
-    if "F" in  n:
-        filename = input()
-        with open(filename, "r") as f:
-            n = int(f.readline())
-            data = list(map(int, f.readline().split()))
+   
 
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
