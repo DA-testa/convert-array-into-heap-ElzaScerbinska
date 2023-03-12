@@ -35,7 +35,7 @@ def main():
     n = input()
 
     # input from keyboard
-    if "I" in n:
+    if "I" or "F" in n:
         n = int(input())
         data = list(map(int, input().split()))
 
