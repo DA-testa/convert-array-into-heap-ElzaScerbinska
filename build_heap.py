@@ -35,9 +35,22 @@ def main():
     n = input()
 
     # input from keyboard
-    if "I" or "F" in n:
+    if "I" in n:
         n = int(input())
         data = list(map(int, input().split()))
+
+        assert len(data) == n
+        swaps = build_heap(data)
+
+        print(len(swaps))
+        for i, j in swaps:
+            print(i, j)
+
+    if "F" in  n:
+        filename = input()
+        with open(filename, "r") as f:
+            n = int(f.readline())
+            data = list(map(int, f.readline().split()))
 
     # checks if lenght of data is the same as the said lenght
         assert len(data) == n
