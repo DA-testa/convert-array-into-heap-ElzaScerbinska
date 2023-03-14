@@ -33,7 +33,13 @@ def main():
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
     n = input()
-
+    if "F" in n:
+        filename = input()
+        if "a" not in filename:
+            path = "./tests/" + filename
+            with open(path, "r") as file:
+                n = int(file.readLine())
+                data = list(map(int, file.readLine().split()))
     # input from keyboard
     if "I" in n:
         n = int(input())
