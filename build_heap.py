@@ -38,8 +38,8 @@ def main():
         if "a" not in filename:
             path = "./tests/" + filename
             with open(path, "r") as file:
-                n = int(file.readLine())
-                data = list(map(int, file.readLine().split()))
+                n = int(file.readline())
+                data = list(map(int, file.readline().split()))
     # input from keyboard
     if "I" in n:
         n = int(input())
